@@ -5,7 +5,7 @@ Very Sempil Bot Auto Filter bot
 # 𝐂𝐋𝐈𝐂𝐊 𝐁𝐄𝐋𝐎𝐖 𝐈𝐌𝐀𝐆𝐄 𝐓𝐎 𝐃𝐄𝐏𝐋𝐎𝐘👇👇👇
 
 
-[![Deploy](https://telegra.ph/file/0ef96037064a25f0e4c7e.jpg)](https://heroku.com/deploy?template=https://github.com/Samantha-a/Devil)
+[![Deploy](https://telegra.ph/file/0ef96037064a25f0e4c7e.jpg)](https://heroku.com/deploy?template=https://github.com/Samantha-a/Devil/repo)
 
 - [x] Auto Filter
 - [x] Manuel Filter
@@ -50,7 +50,7 @@ Very Sempil Bot Auto Filter bot
 
 𝙳𝚎𝚟𝚒𝚕 𝚅1 𝚁𝚎𝚙𝚘
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Samantha-a/Devil-repo)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Samantha-a/Devil)
 ### Hard Way
 
 ```bash
