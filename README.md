@@ -115,4 +115,4 @@ Contact Me On [Telegram](https://t.me/Pro_editor_tg)
 ## License
 Code released under [The GNU General Public License](LICENSE).
 ## credit 🤠
-[ALBIN ](https://t.me/albintko)
+<a href="https://t.me/albintko"><img alt="Telegram" src="https://img.shields.io/badge/Albin tko-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white"/></a>
