@@ -49,7 +49,7 @@ Very Sempil Bot Auto Filter bot
 
 
 ###DEVIL V1 REPO
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Lallu-lallus/anna-ben-repo)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=hhttps://github.com/Samantha-a/Devil-repo)
 ### Hard Way
 
 ```bash
