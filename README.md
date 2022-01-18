@@ -1,6 +1,6 @@
 # Devil
 Very Semple Auto Filter V1 Bot
-##[![Typing SVG](https://readme-typing-svg.herokuapp.com/?lines=Hey+Bro!;My+Name+Is+Devil!;A+Simple+AutoFilter+Bot!;Auto+Filter+With+Double+Button!;Start+Message+With+Pic!;And+All+Other+Features!)
+![Typing SVG](https://readme-typing-svg.herokuapp.com/?lines=Hey+Bro!;My+Name+Is+Devil!;A+Simple+AutoFilter+Bot!;Auto+Filter+With+Double+Button!;Start+Message+With+Pic!;And+All+Other+Features!)
 </p>
  ✮𝐂𝐋𝐈𝐂𝐊 𝐁𝐄𝐋𝐎𝐖 𝐈𝐌𝐀𝐆𝐄 𝐓𝐎 𝐃𝐄𝐏𝐋𝐎𝐘.✮
 
