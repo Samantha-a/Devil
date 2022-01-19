@@ -1,63 +1,53 @@
+import re
 import os
+from os import environ
 
-import time
+id_pattern = re.compile(r'^.\d+$')
 
-class Config(object):
+# Bot information
+SESSION = environ.get('SESSION', '𝖏𝖎𝖓𝖓')
+API_ID = int(environ['API_ID'])
+API_HASH = environ['API_HASH']
+BOT_TOKEN = environ['BOT_TOKEN']
 
-    # Get a bot token from botfather
+# Bot settings
+CACHE_TIME = int(environ.get('CACHE_TIME', 300))
+USE_CAPTION_FILTER = bool(environ.get('USE_CAPTION_FILTER', False))
 
-    TG_BOT_TOKEN = os.environ.get("TG_BOT_TOKEN", "")
+BROADCAST_CHANNEL = int(os.environ.get("BROADCAST_CHANNEL", ""))
+ADMIN_ID = set(int(x) for x in os.environ.get("ADMIN_ID", "").split())
+DB_URL = os.environ.get("DATABASE_1", "")
+BROADCAST_AS_COPY = bool(os.environ.get("BROADCAST", True))
 
-    # Get from my.telegram.org (or @UseTGXBot)
+# Admins, Channels & Users
+ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ['ADMINS'].split()]
+CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ['CHANNELS'].split()]
+auth_users = [int(user) if id_pattern.search(user) else user for user in environ.get('AUTH_USERS', '').split()]
+AUTH_USERS = (auth_users + ADMINS) if auth_users else []
+auth_channel = environ.get('FORCES_SUB')
+AUTH_CHANNEL = int(auth_channel) if auth_channel and id_pattern.search(auth_channel) else auth_channel
+AUTH_GROUPS = [int(admin) for admin in environ.get("AUTH_GROUPS", "").split()]
+TUTORIAL = "https://t.me/MoviesWorld_Group"
+# MongoDB information
+DATABASE_URI = environ['DATABASE_2']
+DATABASE_NAME = environ['BOT_NAME']
+COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Telegram_files')
 
-    API_ID = int(os.environ.get("API_ID", 12345))
+# Messages
+default_start_msg = """
+**Hi, I'm Auto Filter V3 Maintained by @BKC0001**
 
-    # Get from my.telegram.org (or @UseTGXBot)
+Here you can search files in Inline mode as well as PM, Use the below buttons to search files or send me the name of file to search.
+"""
+START_MSG = environ.get('START_MSG', default_start_msg)
 
-    API_HASH = os.environ.get("API_HASH", "")
-
-    
-
-    
-
-    # Database URL from https://cloud.mongodb.com/
-
-    DATABASE_URI = os.environ.get("DATABASE_URI", "")
-
-    # Your database name from mongoDB
-
-    DATABASE_NAME = str(os.environ.get("DATABASE_NAME", "Cluster0"))
-
-    # ID of users that can use the bot commands
-
-    AUTH_USERS = set(str(x) for x in os.environ.get("AUTH_USERS", "").split())
-
-    # To save user details (Usefull for getting userinfo and total user counts)
-
-    # May reduce filter capacity :(
-
-    # Give yes or no
-
-    SAVE_USER = os.environ.get("SAVE_USER", "no").lower()
-
-    # Go to https://dashboard.heroku.com/account, scroll down and press Reveal API
-
-    # To check dyno status
-
-    HEROKU_API_KEY = os.environ.get("HEROKU_API_KEY", "")
-
-    # OPTIONAL - To set alternate BOT COMMANDS
-
-    ADD_FILTER_CMD = os.environ.get("ADD_FILTER_CMD", "add")
-
-    DELETE_FILTER_CMD = os.environ.get("DELETE_FILTER_CMDD", "del")
-
-    DELETE_ALL_CMD = os.environ.get("DELETE_ALL_CMDD", "delall")
-
-    CONNECT_COMMAND = os.environ.get("CONNECT_COMMANDD", "connect")
-
-    DISCONNECT_COMMAND = os.environ.get("DISCONNECT_COMMANDD", "disconnect")
-
-    # To record start time of bot
-
-    BOT_START_TIME = time.time()
+FILE_CAPTION = environ.get("CUSTOM_FILE_CAPTION", "")
+OMDB_API_KEY = environ.get("OMDB_API_KEY", "http://www.omdbapi.com/?i=tt3896198&apikey=4f08a979")
+if FILE_CAPTION.strip() == "":
+    CUSTOM_FILE_CAPTION=None
+else:
+    CUSTOM_FILE_CAPTION=FILE_CAPTION
+if OMDB_API_KEY.strip() == "":
+    API_KEY=None
+else:
+    API_KEY=OMDB_API_KEY
